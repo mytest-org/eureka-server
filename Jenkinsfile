@@ -5,11 +5,7 @@ def project = [name: 'eureka-server',
 	       githubCredentialId: '617bab8b-39fe-43f0-a2a6-a82628d85442',
 	       githubCommit: '']
 
-
-pipeline {
-    agent any
-
-	node {
+node {
 	
     triggers {
         githubPullRequest {
@@ -18,6 +14,10 @@ pipeline {
         }
     }
 }    // end of node
+
+pipeline {
+    agent any
+
     stages {
         
         stage('Clone repository') {
