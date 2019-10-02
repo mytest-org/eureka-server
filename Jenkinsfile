@@ -25,7 +25,7 @@ pipeline {
 				doGenerateSubmoduleConfigurations: false,
 				extensions: [[$class: 'WipeWorkspace']],
 				submoduleCfg: [],
-                      userRemoteConfigs: [[credentialsId: "${project.githubCredentialId}", url: "${project.githubUrl", refspec: '+refs/pull/*:refs/remotes/origin/pr/*']]
+                      userRemoteConfigs: [[credentialsId: "${project.githubCredentialId}", url: "${project.githubUrl}", refspec: '+refs/pull/*:refs/remotes/origin/pr/*']]
 			])
 
 
