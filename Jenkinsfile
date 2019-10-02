@@ -1,11 +1,10 @@
 @Library('jenkins-shared-library@master') _
 
-//def project = [name: 'eureka-server', githubUrl: 'https://github.com/mytest-org/eureka-server.git', githubCredentialId: '', githubCommit: '']
+def project = [name: 'eureka-server',
+	       githubUrl: 'https://github.com/mytest-org/eureka-server.git',
+	       githubCredentialId: '617bab8b-39fe-43f0-a2a6-a82628d85442',
+	       githubCommit: '']
 
-def project.name = 'eureka-server'
-def project.githubUrl = 'https://github.com/mytest-org/eureka-server.git'
-def project.githubCredentialId = '617bab8b-39fe-43f0-a2a6-a82628d85442'
-def project.githubCommit = ''
 
 pipeline {
     agent any
