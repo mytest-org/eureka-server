@@ -8,14 +8,16 @@ def project = [name: 'eureka-server',
 
 pipeline {
     agent any
-    
-/*    triggers {
+
+	node {
+	
+    triggers {
         githubPullRequest {
             permitAll(true)
             useGitHubHooks(true)
         }
     }
-*/    
+}    // end of node
     stages {
         
         stage('Clone repository') {
