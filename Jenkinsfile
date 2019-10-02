@@ -19,6 +19,8 @@ pipeline {
     stages {
         
         stage('Clone repository') {
+		
+		steps {
 
 			checkout([$class: 'GitSCM',
 				branches: [[name: "*/${ghprbActualCommit}"]],
@@ -28,6 +30,7 @@ pipeline {
                       userRemoteConfigs: [[credentialsId: "${project.githubCredentialId}", url: "${project.githubUrl}", refspec: '+refs/pull/*:refs/remotes/origin/pr/*']]
 			])
 
+		} // end of steps
 
         }    // end of clone stage
         
