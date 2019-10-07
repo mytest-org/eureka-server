@@ -14,7 +14,9 @@ pipeline {
         }
 
         stage('Test') {
-            Build ("./gradle", "test")
+            steps {
+                Build ("./gradle", "test")
+            }
         }
     }
 }
