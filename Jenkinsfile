@@ -12,5 +12,9 @@ pipeline {
                 Build ("./gradle", "clean build")
             }
         }
+
+        stage('Test') {
+            Build ("./gradle", "test")
+        }
     }
 }
