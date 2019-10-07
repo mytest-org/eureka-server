@@ -1,6 +1,6 @@
 // Jenkinsfile with new Pull Request
 
-@Library('jenkins-shared-library@master') _
+@Library('jenkins-shared-library_git@master') _
 
 
 pipeline {
