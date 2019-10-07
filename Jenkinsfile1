@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                ExecuteGradle ("./gradle", "clean build")
+                ExecuteGradle ("./gradlew", "clean build")
             }
         }
 
