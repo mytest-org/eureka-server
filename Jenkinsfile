@@ -29,14 +29,15 @@ pipeline {
 		
 		steps {
 
-			checkout([$class: 'GitSCM',
-				branches: [[name: "*/${ghprbActualCommit}"]],
-				doGenerateSubmoduleConfigurations: false,
-				extensions: [[$class: 'WipeWorkspace']],
-				submoduleCfg: [],
-                      userRemoteConfigs: [[credentialsId: "${project.githubCredentialId}", url: "${project.githubUrl}", refspec: '+refs/pull/*:refs/remotes/origin/pr/*']]
-			])
-
+//			checkout([$class: 'GitSCM',
+//				branches: [[name: "*/${ghprbActualCommit}"]],
+//				doGenerateSubmoduleConfigurations: false,
+//				extensions: [[$class: 'WipeWorkspace']],
+//				submoduleCfg: [],
+//                      userRemoteConfigs: [[credentialsId: "${project.githubCredentialId}", url: "${project.githubUrl}", refspec: '+refs/pull/*:refs/remotes/origin/pr/*']]
+//			])
+echo "dummy step"
+			
 		} // end of steps
 
         }    // end of clone stage
