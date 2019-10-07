@@ -6,6 +6,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                //Load gradle command and arguments
+                load "config/gradle.groovy"
                 ExecuteGradle ('./gradlew clean build')
             }
         }
