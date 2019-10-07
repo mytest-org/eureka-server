@@ -42,7 +42,7 @@ pipeline {
         
         stage('build') {
             steps {
-                ExecuteGradle ('./gradlew clean build')
+                ExecuteGradle ("./gradle", "clean build")
             }
         }
     }
