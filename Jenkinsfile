@@ -7,6 +7,7 @@ def project = [name: 'eureka-server',
 	       githubCredentialId: '617bab8b-39fe-43f0-a2a6-a82628d85442',
 	       githubCommit: '']
 
+/*
 node {
 	
     triggers {
@@ -16,6 +17,7 @@ node {
         }
     }
 }    // end of node
+*/
 
 pipeline {
     agent any
